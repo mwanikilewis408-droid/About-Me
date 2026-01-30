@@ -118,4 +118,9 @@ window.addEventListener("load", () => {
     }, 800);
   }, 1200);
 });
-document.getElementById("year").textContent = new Date().getFullYear();
+document.addEventListener("DOMContentLoaded", () => {
+  const yearEl = document.getElementById("year");
+  if (yearEl) {
+    yearEl.textContent = new Date().getFullYear();
+  }
+});
